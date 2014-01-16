@@ -19,18 +19,11 @@ class LoginPage
   button(:login, id: "wpLoginAttempt")
   a(:logout_link, text: "Log out")
   text_field(:password, id: "wpPassword1")
-  a(:password_strength, text: "password strength")
-  a(:phishing, text: "phishing")
   text_field(:username, id: "wpName1")
-  a(:username_displayed, title: /Your user page/)
 
-  def logged_in_as_element
-    @browser.div(id: "mw-content-text").p.b
-  end
   def login_with(username, password)
-    self.username_element.when_present.send_keys(username)
-    self.password_element.when_present.send_keys(password)
-    login_element.fire_event("onfocus")
+    username_element.when_present.send_keys(username)
+    password_element.when_present.send_keys(password)
     login_element.when_present.click
   end
 end

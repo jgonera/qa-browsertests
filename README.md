@@ -1,1 +1,3 @@
-Please see https://github.com/wikimedia/mediawiki-selenium for instructions on how to run tests.
+A fork of https://github.com/wikimedia/qa-browsertests for TDD workshop purposes.
+
+Many tests removed to keep it simple.
